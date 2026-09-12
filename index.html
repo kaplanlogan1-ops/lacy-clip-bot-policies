@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lacy Clip Bot Policies</title>
+<style>
+  :root{
+    --bg:#f5f6f8;
+    --surface:#ffffff;
+    --border:#dde1e7;
+    --text:#1b1f27;
+    --text-dim:#5b6472;
+    --accent:#3e5c9a;
+    --accent-dim:#7387b3;
+    --mono-chip:#eef0f4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14161b;
+      --surface:#1b1e25;
+      --border:#2c3038;
+      --text:#e7e9ed;
+      --text-dim:#9aa2b1;
+      --accent:#8ea6e0;
+      --accent-dim:#5e6f97;
+      --mono-chip:#22262e;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14161b;
+    --surface:#1b1e25;
+    --border:#2c3038;
+    --text:#e7e9ed;
+    --text-dim:#9aa2b1;
+    --accent:#8ea6e0;
+    --accent-dim:#5e6f97;
+    --mono-chip:#22262e;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    margin:0;
+    padding-inline:20px;
+    padding-block:56px;
+    font-family:"IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    line-height:1.6;
+  }
+  .doc{
+    max-width:680px;
+    margin:0 auto;
+  }
+  header{
+    margin-bottom:40px;
+  }
+  .kicker{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.75rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    background:var(--mono-chip);
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:4px;
+    border:1px solid var(--border);
+  }
+  h1{
+    font-size:2rem;
+    margin:16px 0 6px;
+    text-wrap:balance;
+    letter-spacing:-0.01em;
+  }
+  .subtitle{
+    color:var(--text-dim);
+    font-size:1rem;
+    margin:0;
+  }
+  nav.toc{
+    display:flex;
+    gap:10px;
+    margin-top:24px;
+    flex-wrap:wrap;
+  }
+  nav.toc a{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.8rem;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid var(--border);
+    background:var(--surface);
+    padding:6px 12px;
+    border-radius:5px;
+  }
+  nav.toc a:hover{ border-color:var(--accent); }
+
+  section{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:28px clamp(18px, 4vw, 34px);
+    margin-bottom:24px;
+    scroll-margin-top:20px;
+  }
+  section h2{
+    font-size:1.3rem;
+    margin-top:0;
+    text-wrap:balance;
+  }
+  section h3{
+    font-size:1rem;
+    margin-bottom:6px;
+    color:var(--text);
+  }
+  section p{ color:var(--text); max-width:62ch; }
+  section p.dim{ color:var(--text-dim); font-size:0.92rem; }
+  ul{ padding-left:1.2em; max-width:62ch; }
+  li{ margin-bottom:6px; }
+  .field{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.85em;
+    background:var(--mono-chip);
+    padding:1px 5px;
+    border-radius:4px;
+  }
+  footer{
+    color:var(--text-dim);
+    font-size:0.85rem;
+    text-align:center;
+    margin-top:36px;
+  }
+  a.inline{ color:var(--accent); }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+</head>
+<body>
+<div class="doc">
+  <header>
+    <span class="kicker">lacy-clip-bot</span>
+    <h1>Terms of Service &amp; Privacy Policy</h1>
+    <p class="subtitle">A personal Twitch-to-TikTok clipping tool, built and operated by Logan Kaplan for his own use.</p>
+    <nav class="toc">
+      <a href="#terms">Terms of Service</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="terms">
+    <h2>Terms of Service</h2>
+    <p>lacy-clip-bot is a single-operator tool, not a public product. It watches a livestream Logan follows, detects moments worth clipping, creates the clip through the streaming platform's own clip feature, and reformats it into a short vertical video. Once approved for TikTok's Content Posting API, it publishes finished clips to a TikTok account Logan personally operates.</p>
+    <h3>What it isn't</h3>
+    <ul>
+      <li>Not offered to other users — there's no sign-up, no accounts, no multi-tenant service.</li>
+      <li>Not used to post anything other than clips Logan reviews as part of running the tool.</li>
+      <li>Not used to scrape, harvest, or redistribute anyone's data beyond the single stream it's pointed at.</li>
+    </ul>
+    <h3>Changes</h3>
+    <p class="dim">This tool and its scope may change as it develops. Material changes to what it does or which accounts it posts to will be reflected here before they take effect.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <h3>What's accessed</h3>
+    <ul>
+      <li><span class="field">Twitch</span> — a stream's public live status and clip-creation API, authorized via OAuth under Logan's own Twitch account.</li>
+      <li><span class="field">TikTok</span> — the Content Posting API, authorized via OAuth under a TikTok account Logan controls, used only to publish the clips this tool creates.</li>
+    </ul>
+    <h3>What's stored</h3>
+    <p>Access tokens and the video files themselves are stored locally on Logan's own computer. Nothing is uploaded to a third-party server, sold, shared, or used for advertising or analytics.</p>
+    <h3>Retention &amp; deletion</h3>
+    <p class="dim">Tokens persist until Logan revokes them from his Twitch or TikTok account settings. Clip files are kept locally and deleted at Logan's discretion.</p>
+  </section>
+
+  <footer id="contact">
+    Questions about this tool — <a class="inline" href="mailto:kaplanlogan1@gmail.com">kaplanlogan1@gmail.com</a><br>
+    Last updated September 2026
+  </footer>
+</div>
+
+</body>
+</html>
